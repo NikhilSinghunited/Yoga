@@ -1,0 +1,140 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>10-Day Online Free Yoga Challenge</title>
+    <style>
+      *{margin:0; padding:0, } .keshav{ display:flex; flex-direction:column;
+      justify-content:center; background-color:#0d4056;justify-content:center
+      !important;align-items: center;width:30%;margin-left:35%;} #intt, input{ width:95%;height:50px
+      !important;border-radius:12px 12px; margin-bottom: 15px; }
+      .alagse {
+    {{!-- display: flex; --}}
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    background-color:#0d4056;
+    width:30%;
+    margin-left:35%;
+     /* Full viewport height for vertical centering */
+}
+.para{
+  display:flex;
+  
+}
+    </style>
+  </head>
+  <body>
+
+    <img
+      style='margin-left:35%;width:900px;'
+      src='https://assets.habit.yoga/freeyoga/chal_app_banner.png'
+      alt='banner image'
+      class='image'
+    />
+    <div class='container1'>
+      <div class='container'>
+
+        <h1 style='text-align:center'>Join the 10-Day Online Free Yoga Challenge</h1>
+        <form
+          action='/register'
+          class='keshav'
+          method='POST'
+          onsubmit='return validateForm()'
+        >
+          <input
+            type='text'
+            name='name'
+            placeholder='Enter Your Name'
+            required
+          />
+          <input
+            type='tel'
+            id='phone'
+            name='phone'
+            placeholder='+91XXXXXXXXXX'
+            value='+91'
+            required
+            oninput='validatePhone()'
+          />
+          <input type='hidden' name='referrer' value='{{referrer}}' />
+          <button
+            type='submit'
+            id='intt'
+            style='background-color:darkgoldenrod'
+          >Register Now for FREE</button>
+          <p style='text-align:center'>Rahul & 56,17,063+ have registered already!/p>
+        </form>
+        
+      </div>
+      <div class="alagse ">
+        <div class="1image">
+        <img style="width:850px;margin-left:3%;"
+          src='https://assets.habit.yoga/freeyoga/Batch_Timing_LP.png'
+          alt='alag image'
+          
+        />
+        </div>
+        <div class="2image">
+          <img style="width:850px;margin-left:3%;" 
+            src='https://assets.habit.yoga/freeyoga/LP_BW.png'
+            alt='alag image'
+            
+          />
+        </div>
+        <div class="para" style="display: flex;flex-direction:row; gap:7%;">
+          <div style="margin-left:5%; "class="1"  >
+            <p style="color: yellow; font-size:30px;">
+  12 +
+</p>
+
+            <p style="color:white;font-size:30px; font-size:30px;">
+              Year of Experience
+            </p>
+          </div>
+         <div class="2">
+          <p  style="color: yellow; font-size:30px;"> 37 Lakhs +</p>
+          <P style="color:white;font-size:30px;">
+            Community Member
+          </P>
+          </div>
+          <div class="3">
+            <p style="color: yellow;font-size:30px;">
+              5/5  *
+            </p>
+            <p style="color:white;font-size:30px;">
+              Google Rating
+            </p><br>
+
+        </div>
+        </div>
+        <h1 style="color:yellow;font-size:30px;margin-left:20%;">Media Coverage in 50+ Newspaper</h1>
+        <div class="slider">
+        <div class="slides">
+            <img src="" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+      </div>
+      <script>
+        function validatePhone() { const phoneInput =
+        document.getElementById('phone'); let phoneValue = phoneInput.value; //
+        Ensure the value starts with +91 if (!phoneValue.startsWith('+91')) {
+        phoneInput.value = '+91'; phoneValue = '+91'; } // Remove any
+        non-numeric characters except the prefix phoneValue =
+        phoneValue.replace(/[^0-9\+]/g, ''); if (!phoneValue.startsWith('+91'))
+        { phoneValue = '+91'; } // Limit to 12 characters including +91 if
+        (phoneValue.length > 13) { phoneValue = phoneValue.slice(0, 13); }
+        phoneInput.value = phoneValue; } function validateForm() { const
+        phoneInput = document.getElementById('phone').value; const numericPart =
+        phoneInput.slice(3); // Exclude +91 prefix if (numericPart.length !== 10
+        || isNaN(numericPart)) { alert('WhatsApp number must be exactly 10
+        digits long and contain only numbers after +91.'); return false; }
+        return true; }
+      </script>
+    </div>
+  </body>
+</html>
